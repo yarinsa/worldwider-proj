@@ -1,0 +1,25 @@
+.msg-container {
+  bottom: 10px;
+  background-color: white;
+  padding: 5px 10px;
+  position: fixed;
+  padding: 10px 20px;
+  box-shadow: 0 3px 10px $primary-color-dark;
+  right: 50;
+  font-family: $main-font;
+  z-index: 99999;
+  font-size: rem(16px);
+  opacity: 0;
+  transition: all 0.1s;
+  visibility: none;
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  &.success {
+    box-shadow: 0 3px 10px rgb(1, 128, 7);
+  }
+  &.danger {
+    box-shadow: 0 3px 10px rgb(185, 59, 17);
+  }
+}

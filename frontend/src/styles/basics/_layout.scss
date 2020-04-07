@@ -1,0 +1,13 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: $background-color;
+  align-items: center;
+}
+
+.main-container {
+  flex: 1;
+  padding: 0 20px;
+  margin-top: 40px;
+}

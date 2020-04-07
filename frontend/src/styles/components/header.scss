@@ -1,0 +1,201 @@
+.site-header {
+  display: flex;
+  width: 100%;
+  z-index: 8;
+  color: #333;
+  box-shadow: 0 -6px 12px #333;
+
+  &.home {
+    background: linear-gradient(
+      0deg,
+      rgba(2, 0, 36, 0) 5%,
+      rgba(23, 62, 119, 0.6) 95%
+    );
+    position: absolute;
+    box-shadow: none;
+    color: white;
+  }
+
+  // style.color = `white`;
+  // style.boxShadow = "none";
+  // }
+  &-logo {
+    font-size: rem(36px);
+    padding: 0 20px;
+    line-height: 80px;
+  }
+  &-content {
+    flex: 1;
+  }
+  &-user {
+    &-container {
+      position: relative;
+    }
+    &-menu {
+      position: absolute;
+      border-radius: $border-radius;
+      color: #333;
+      padding: 0 0;
+      font-size: rem(14px);
+      font-family: $main-font-bold;
+      color: #333;
+      text-align: center;
+      list-style: none;
+      box-shadow: $focus;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      top: 75px;
+      left: -5px;
+      &.active {
+        opacity: 1;
+        visibility: visible;
+        cursor: pointer;
+      }
+      &-item {
+        padding: 0 10px;
+        line-height: 30px;
+        border-radius: $border-radius;
+        white-space: nowrap;
+        transition: background 0.2 ease;
+        background-color: rgba(255, 255, 255, 1);
+        color: black;
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.8);
+        }
+      }
+    }
+  }
+  &-avatar {
+    margin-top: 15px;
+    &.active {
+      border: 1px solid #333;
+    }
+  }
+  &-nav {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    min-height: 0;
+
+    &-item {
+      line-height: 80px;
+      text-align: center;
+      font-size: rem(16px);
+      font-family: $main-font-bold;
+      padding: 0 20px;
+
+      cursor: pointer;
+      &:hover {
+        color: inherit !important;
+      }
+    }
+    a:hover {
+      color: inherit !important;
+    }
+    &-link {
+      &:hover {
+        border-bottom: 2px solid #173e77;
+      }
+    }
+    &-button {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .site-header {
+    min-height: 80px;
+    color: #333;
+    &-nav {
+      flex-direction: column;
+      flex: 1;
+      padding: 0;
+      &.active {
+        background-color: white;
+      }
+      &-button.home {
+        color: white;
+        &.active {
+          color: #333;
+        }
+      }
+      &-item {
+        opacity: 0;
+        display: none;
+        transition: all 0.2 ease-in-out;
+        &:hover {
+          background-color: rgba(227, 235, 248, 0.4);
+        }
+
+        &.site-header-user-container {
+          opacity: 1;
+          display: block;
+          order: -1;
+          // position: absolute;
+          top: 0;
+          &:hover {
+            background-color: transparent;
+          }
+        }
+        &.active {
+          opacity: 1;
+          display: block;
+        }
+      }
+      &-link {
+        color: #333;
+        &:hover {
+          border-bottom: none;
+        }
+      }
+      &-button {
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 20px;
+        background: none;
+        font-size: rem(25px);
+        border: none;
+        cursor: pointer;
+        z-index: 2000;
+        &:hover {
+          color: #333;
+        }
+        &:focus,
+        &:active {
+          outline: none;
+        }
+      }
+    }
+    &-logo {
+      position: absolute;
+      &.active {
+        left: 70px;
+      }
+      &.hidden {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+    &-content {
+      display: none;
+    }
+
+    &-user {
+      &-menu {
+        top: 80px;
+        width: 100vw;
+        &-item {
+          font-size: 28px;
+          line-height: unset;
+          border-radius: 0;
+          &:hover {
+            background-color: rgb(219, 219, 219);
+          }
+        }
+      }
+    }
+  }
+}

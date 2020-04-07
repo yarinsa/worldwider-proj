@@ -1,0 +1,32 @@
+.cube-textbox {
+  text-transform: uppercase;
+  font-family: $main-font;
+  color: #333;
+  border-radius: 2px;
+  display: inline-block;
+  font-size: rem(12px);
+  padding: 0 8px;
+  margin-right: 7px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  user-select: none;
+  &.blue {
+    background-color: #84bffd;
+    &:hover {
+      background-color: rgb(99, 169, 243);
+    }
+  }
+  &.gray {
+    background-color: #e6e5e5;
+    &:hover {
+      background-color: rgb(217, 217, 217);
+    }
+  }
+  &-remove {
+    color: $lightGray;
+    cursor: pointer;
+    &:hover {
+      color: inherit;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.site-footer {
+  border-top: 1px solid $border-color;
+  background-color: rgb(247, 247, 247);
+  min-height: 10vh;
+  justify-content: center;
+  text-align: center;
+  font-size: rem(14px);
+  padding: 20px 20px;
+  width: 100%;
+  &-logo {
+    padding-right: 14px;
+    font-size: rem(18px);
+  }
+}

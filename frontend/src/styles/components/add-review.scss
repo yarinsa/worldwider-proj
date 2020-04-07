@@ -1,0 +1,33 @@
+.add-review {
+  &-container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start;
+  }
+  &-rating {
+    line-height: 40px;
+    margin-bottom: 10px;
+    & .rating-star {
+      font-size: rem(24px) !important;
+    }
+  }
+  &-textarea {
+    textarea {
+      width: 500px;
+      height: 80px;
+    }
+  }
+  &-name {
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: $desktop) {
+  .add-review {
+    &-textarea {
+      textarea {
+        width: 250px;
+      }
+    }
+  }
+}

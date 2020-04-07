@@ -1,0 +1,41 @@
+.popper {
+  border-radius: $border-radius;
+  text-align: center;
+  font-size: inherit;
+  display: inline-block;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  opacity: 0;
+  max-width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: white;
+  &.active {
+    border: $border;
+    box-shadow: $focus;
+    visibility: visible;
+    opacity: 1;
+  }
+  &-item {
+    padding: 0 20px;
+    transition: background 0.2s ease;
+    &:hover,
+    &:focus {
+      outline: none;
+      background-color: rgb(48, 138, 197);
+      cursor: pointer;
+    }
+  }
+  &::-webkit-scrollbar {
+    width: 0.3em;
+  }
+
+  &::-webkit-scrollbar-track {
+    width: 0;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 100vh;
+  }
+}

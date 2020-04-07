@@ -1,0 +1,29 @@
+.rating-star {
+  color: rgb(197, 195, 195);
+  cursor: inherit;
+  font-size: rem(20px);
+  &.active {
+    cursor: pointer;
+  }
+  &.min {
+    color: rgb(48, 138, 197);
+    // color: rgb(235, 211, 3);
+  }
+  &.mid {
+    color: rgb(41, 86, 170);
+    // color: rgb(235, 181, 3);
+  }
+  &.max {
+    color: rgb(31, 47, 136);
+    // color: rgb(224, 154, 3);
+  }
+  &-value {
+    font-size: rem(16px);
+    font-family: $main-font-bold;
+  }
+  &-total {
+    font-size: rem(12px);
+    color: $lightGray;
+    font-family: $main-font-light;
+  }
+}

@@ -1,0 +1,57 @@
+.booking-preview {
+  &-reservations {
+    &-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 30px;
+      img{
+        width:100%;
+      }
+    }
+    &-item {
+      min-height: 200px;
+      border-radius: $border-radius;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      &-info {
+        border-radius: 0 0 $border-radius $border-radius;
+        background-color: rgba(188, 214, 251, 0.8);
+        padding: 5px 5px;
+        display: flex;
+        flex-direction: column;
+        line-height: 20px;
+        &-name {
+          font-family: $main-font-bold;
+          font-size: rem(22px);
+        }
+        &-email {
+          color: $lightGray;
+          font-size: rem(16px);
+          cursor: pointer;
+          &:hover {
+            color: #333;
+          }
+        }
+        &-attendees {
+        }
+        &-total {
+          font-family: $main-font-bold;
+          color: $primary-color-dark;
+          font-size: rem(18px);
+        }
+      }
+    }
+  }
+}
+
+// @media (max-width: $desktop) {
+
+// .booking-preview {
+//   &-reservations {
+//     &-container {
+//       img{
+//         width:100%;
+//       }
+//     }}
+//   }}

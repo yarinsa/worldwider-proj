@@ -1,0 +1,28 @@
+.profile{
+    display: flex;
+    flex-direction: column;
+    &-container {
+        display: flex;
+        justify-content: space-between;
+        &-intro {
+            display: flex;
+            flex-direction: column;
+            margin-left: 10px;
+          }
+    }
+    &-image {
+        height: 180px;
+    }
+}
+  
+@media (max-width: $desktop){
+// @media (max-width: 640) {
+  .profile{
+    &-container {
+      flex-flow: row-reverse;
+    }
+    &-image {
+      height: 60px;
+    }
+  }
+}

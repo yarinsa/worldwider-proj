@@ -1,0 +1,49 @@
+.register-form {
+  flex: 1;
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: $desktop;
+    margin: auto;
+  }
+  &-title {
+    font-weight: 500;
+    &-light {
+      font-weight: normal;
+      font-family: $main-font-light;
+    }
+    &-bold {
+      font-weight: normal;
+      font-family: $main-font-bold;
+    }
+  }
+  &-item {
+    display: block;
+    margin-bottom: 10px;
+  }
+  &-image {
+    flex: 1;
+    border-radius: $border-radius;
+    background-size: cover;
+    background-position: center;
+    margin-left: 20px;
+    min-height: rem(277px);
+    min-width: rem(370px);
+    
+  }
+}
+@media (max-width: $desktop) {
+  .register-form {
+    &-title {
+      font-size: rem(48px);
+    }
+  }
+}
+@media (max-width: 460) {
+  .register-form {
+    &-image{
+      margin: auto;
+    }
+  }
+}

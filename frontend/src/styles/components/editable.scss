@@ -1,0 +1,10 @@
+.editable {
+  &.active {
+    outline: none;
+    text-decoration: underline;
+  }
+  &:focus,
+  :active {
+    outline: none;
+  }
+}

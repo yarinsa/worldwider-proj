@@ -1,0 +1,79 @@
+.backoffice {
+  &-wrapper {
+    margin-top: 0 !important;
+  }
+  &-container {
+    display: flex;
+    // position: relative;
+
+    width: 100vw;
+    min-height: 100vh;
+  }
+  &-sidebar {
+    height: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    box-shadow: -3px 6px 8px #333;
+    min-width: 140px;
+    text-align: center;
+    &-item {
+      padding: 10px 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      user-select: none;
+      cursor: pointer;
+      &.active {
+        background-color: #e5eefb;
+      }
+      &-icon {
+        color: #999;
+        font-size: rem(30px);
+        &:hover {
+          color: $primary-color-dark;
+        }
+      }
+      &-text {
+        font-family: $main-font-bold;
+      }
+    }
+  }
+  &-content {
+    &-container {
+      flex: 1;
+      padding: 0 40px;
+      margin-left: 120px;
+    }
+    &-stats {
+      border-top: 1px solid $border-color;
+      margin-top: 100px;
+      margin-bottom: 40px;
+    }
+    &-bookings {
+      border-top: 1px solid $border-color;
+      margin-bottom: 40px;
+      margin-top: 20px;
+    }
+    &-reviews {
+      border-top: 1px solid $border-color;
+    }
+  }
+}
+@media (max-width: $desktop) {
+  .backoffice {
+    &-container {
+      flex-direction: column;
+    }
+    &-sidebar {
+      position: relative;
+      box-shadow: none;
+      &-item {
+        border-bottom: 1px solid #3333;
+      }
+    }
+    &-content-container {
+      margin: 0;
+    }
+  }
+}
