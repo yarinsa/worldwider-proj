@@ -29,7 +29,7 @@
     "mongodb": "^3.2.7",
     "node-red-contrib-moment": "^3.0.3",
     "serve-static": "^1.14.1",
-    "socket.io": "^2.3.0",
+    "socket.io": "^2.5.0",
     "vue": "^2.6.11",
     "vue-chartjs": "^3.5.0",
     "vue-feather-icons": "^5.0.0",
